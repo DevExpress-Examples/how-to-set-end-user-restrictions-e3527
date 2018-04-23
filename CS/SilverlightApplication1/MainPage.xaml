@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduler"
+    mc:Ignorable="d"
+    d:DesignHeight="515" d:DesignWidth="777">
+
+    <Grid>
+        <dxsch:SchedulerControl Name="schedulerControl1"
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                AllowAppointmentConflicts="schedulerControl1_AllowAppointmentConflicts"
+                                AllowAppointmentCreate="schedulerControl1_AllowAppointmentCreate">
+            <dxsch:SchedulerControl.DayView>
+                <dxsch:DayView DayCount="3"/>
+            </dxsch:SchedulerControl.DayView>
+            <dxsch:SchedulerControl.OptionsCustomization>
+                <dxsch:OptionsCustomization AllowAppointmentConflicts="Custom" 
+                                            AllowAppointmentCreate="Custom"/>
+            </dxsch:SchedulerControl.OptionsCustomization>
+        </dxsch:SchedulerControl>
+    </Grid>
+</UserControl>
